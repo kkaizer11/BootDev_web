@@ -23,7 +23,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	corsMux := middlewareCors(mux)
-	mux.Handle("/", http.FileServer(http.Dir(".")))
+	mux.Handle("/", http.FileServer(http.Dir("apps/")))
 
 	srv := http.Server{
 		Addr:    ":" + port,
